@@ -1,0 +1,21 @@
+<section class="content-header">
+      <h1><strong>
+      Current Orders
+       </strong>
+      </h1>
+      <ol class="breadcrumb">
+       <!--  <li><a href="#"><i class="fa fa-dashboard"></i> DashBoard</a></li> -->
+        <li class="active"><i class="fa fa-dashboard"></i>  Current Orders</li>
+      </ol>
+    </section>
+    
+<div id = "test" style="margin-top:15px;" ng-controller="gridcontroller">
+ <div class = "main" ui-grid="gridOptions1" ui-grid-auto-resize ui-grid-pagination ui-grid-selection ></div>
+
+ <button ng-click ="newData()">New Order</button>
+ <button ng-click ="modifyData()">Modify</button>
+ <button ng-click ="deleteOrders()">Delete</button> 
+ </div>
+
+
+

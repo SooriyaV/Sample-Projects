@@ -1,0 +1,129 @@
+<div class="ui-grid-cell-contents" ng-controller="orderEditCtrl"
+	ng-app="hello">
+	<h3>Basic Order Info</h3>
+	<div class="box box-default">
+		<div class="box-header with-border">
+			<h3 class="box-title">Basic Order Information</h3>
+
+			<div class="box-tools pull-right">
+				<button type="button" class="btn btn-box-tool"
+					data-widget="collapse">
+					<i class="fa fa-minus"></i>
+				</button>
+			</div>
+		</div>
+		
+		<!-- /.box-header -->
+		<div class="box-body">
+			<div class="row">
+				
+				<div class="col-md-6">
+		
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8"> Order Number</label> 
+						<input type="text" class ="col-md-2 col-xs-8"  ng-model="griddata.ordernumber" ng-disabled="true" id="orderno">
+					</div>
+
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8">Inventory Number</label> 
+							<select class="col-md-2 col-xs-8"  ng-change="getim02()" ng-model="griddata.invnumber"
+							ng-disabled="!(griddata.status == 'NEW')"
+							ng-options="x for x in inventory">
+							<option value="" disabled selected>{{griddata.invnumber}}</option>
+							</select>
+					</div>
+
+
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8">Customer</label> 
+							<select class="col-md-2 col-xs-8" ng-model="griddata.customernumber"
+							ng-disabled="!(griddata.status == 'NEW')"
+							ng-options="x for x in customerss">
+							<option value="" disabled selected>{{griddata.customernumber}}</option>
+							</select>
+
+					</div>
+
+				</div>
+				
+				<!-- col1 -->
+				
+				<div class="col-md-6">
+				
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8">Order Date</label>
+						<!-- <div class="input-group date">
+							<div class="input-group-addon">
+								<i class="fa fa-calendar"></i>
+							</div> -->
+		
+							<i class="fa fa-calendar"></i>
+							
+							<input type="text" class ="col-md-3 col-xs-8" data-date-format="yyyy-mm-dd" required
+								ng-model="griddata.ordereddate" id="datepicker">
+						<!-- </div> -->
+					</div>
+
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8">Route</label> <select class="col-md-2 col-xs-8" ng-model="griddata.routeName"
+							ng-disabled="!(griddata.status == 'NEW')"
+							ng-options="x for x in routes">
+							<option value="" disabled selected>{{griddata.routeName}}</option>
+						</select>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8">Status</label> <input class="col-md-2 col-xs-8" type="text"
+							ng-model="griddata.status" disabled>
+					</div>
+				</div>
+				<!-- Col2 -->
+				</div>
+				<!-- Row -->
+				</div>
+				<!-- Box body -->
+				</div>
+				<!-- Box Default -->
+<h3>Order Inclusions</h3>
+<div class="box box-default">
+		<div class="box-header with-border">
+			<h3 class="box-title">Order Inclusions</h3>
+
+			<div class="box-tools pull-right">
+				<button type="button" class="btn btn-box-tool"
+					data-widget="collapse">
+					<i class="fa fa-minus"></i>
+				</button>
+			</div>
+		</div>
+		<!-- Box Header -->
+		<div class="box-body">
+			<div class="row">
+			<div class="col-md-12">
+<div id="grid1" ui-grid="gridOptions2" ui-grid-selection ui-grid-edit
+	ui-grid-auto-resize></div>
+<div style="float: right; text-align: left;">
+	<h4>
+		Bill Amount : <Strong>{{griddata.totalamount}}</Strong>
+	</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div>
+	<button ng-click="saveOrder()" ng-disabled ="!checknow">Save Order</button>
+	<button ng-click="openArticleSelection()" ng-disabled ="!checknow">Choose articles</button>
+	<button ng-click="deleteArticles()" ng-disabled ="!checknow">Remove</button>
+</div>
+</div>
+<script>
+  $(function () {
+	  $(".select2").select2();
+   //Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    });
+    });
+</script>

@@ -1,0 +1,117 @@
+<div class="modal" ng-style="modalStyle">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+Order View
+</div>
+<div class="modal-body" ng-controller="showOrderDetailCtrl">
+	<h3>Basic Order Info</h3>
+	<div class="box box-default">
+		<div class="box-header with-border">
+			<h3 class="box-title">Basic Order Information</h3>
+
+			<div class="box-tools pull-right">
+				<button type="button" class="btn btn-box-tool"
+					data-widget="collapse">
+					<i class="fa fa-minus"></i>
+				</button>
+			</div>
+		</div>
+		
+		<!-- /.box-header -->
+		<div class="box-body">
+			<div class="row">
+				
+				<div class="col-md-6">
+		
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8"> Order Number</label> 
+						<input type="text" class ="col-md-4 col-xs-8"  ng-model="orderdata.ordernumber" ng-disabled="true" id="orderno">
+					</div>
+
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8">Inventory Number</label> <input class ="col-md-4 col-xs-8" type="text"
+							ng-change="getim02()" ng-disabled="true" ng-model="orderdata.invnumber" id="inv">
+					</div>
+
+
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8">Customer</label> <input type="text"  class ="col-md-4 col-xs-8"
+							ng-model="orderdata.customernumber" ng-disabled="true" id="orderno">
+
+					</div>
+
+				</div>
+				
+				<!-- col1 -->
+				
+				<div class="col-md-6">
+				
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8">Order Date</label>
+						<!-- <div class="input-group date">
+							<div class="input-group-addon">
+								<i class="fa fa-calendar"></i>
+							</div> -->
+		
+							<i class="fa fa-calendar"></i>
+							
+							<input type="text" class ="col-md-6 col-xs-8" data-date-format="yyyy-mm-dd" required
+								ng-model="orderdata.ordereddate" ng-disabled="true" id="datepicker">
+						<!-- </div> -->
+					</div>
+
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8">Route</label>  <input class="col-md-4 col-xs-8" type="text"
+							ng-model="orderdata.routeName" ng-disabled="true">
+							
+					</div>
+
+					<div class="form-group row">
+						<label class="col-md-4 col-xs-8">Status</label> <input class="col-md-4 col-xs-8" type="text"
+							ng-model="orderdata.status" ng-disabled="true">
+					</div>
+				</div>
+				<!-- Col2 -->
+				</div>
+				<!-- Row -->
+				</div>
+				<!-- Box body -->
+				</div>
+				<!-- Box Default -->
+<div>
+	<h4>
+		Bill Amount : <Strong>{{orderdata.totalamount}}</Strong>
+	</h4>
+</div>				
+<h3>Order Inclusions</h3>
+<div class="box box-default">
+		<div class="box-header with-border">
+			<h3 class="box-title">Order Inclusions</h3>
+
+			<div class="box-tools pull-right">
+				<button type="button" class="btn btn-box-tool"
+					data-widget="collapse">
+					<i class="fa fa-minus"></i>
+				</button>
+			</div>
+		</div>
+		<!-- Box Header -->
+		<div class="box-body">
+			<div class="row">
+			<div class="col-md-12">
+<div id="grid1" ui-grid="showArticles"
+	ui-grid-auto-resize></div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="modal-footer">
+<button ng-click = "closeshowOrdersFromRoute()"  >Close</button>
+</div>
+</div>
+</div>
+</div>

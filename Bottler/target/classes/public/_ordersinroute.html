@@ -1,0 +1,16 @@
+<section class="content-header" ng-controller="ordersInRouteCtrl">
+      <h1><strong>
+       Orders in Route {{routeId}}
+       </strong>
+      </h1>
+      <ol class="breadcrumb">
+       <li><a href="#/route"><i class="fa fa-dashboard"></i> Route</a></li>
+        <li class="active"><i class="fa fa-dashboard"></i>Order in Route</li>
+      </ol>
+    </section>
+
+<div style="margin-top:15px;">
+
+<div id="grid1" ui-grid="OrdersInRouteGridOptions" ui-grid-pagination ui-grid-auto-resize  ui-grid-selection class="grid"></div>
+  
+</div>

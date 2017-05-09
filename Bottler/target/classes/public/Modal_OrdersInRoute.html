@@ -1,0 +1,27 @@
+<div class="modal" ng-controller = "routeWizard" ng-style="modalStyle">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" ng-click = "close()">
+          Close 
+        </button>
+</div>
+<div class="modal-body" ng-if ="!showload">
+<div id="grid1" ui-grid="routeOrderGridOptions" ui-grid-pagination  ui-grid-selection class="grid"></div>
+  
+</div>
+<div class="modal-footer" ng-if ="!showload">
+<button ng-click = "alterItems()" ng-disabled = "disableChangeLoadbtn"  >Change Load</button>
+<button  ng-click = "no()"  >Skip to Check-In</button>
+</div>
+<div class="modal-body" ng-if ="showload">
+<div id="grid1" ui-grid="loadgridoptions" ui-grid-pagination ui-grid-edit ui-grid-selection class="grid"></div>
+  
+</div>
+<div class="modal-footer" ng-if ="showload">
+<button  ng-click = "back()"  >Back</button>
+<button ng-click = "saveLoad()"  >Save</button>
+</div>
+</div>
+</div>
+</div>

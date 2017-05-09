@@ -1,0 +1,53 @@
+<div class="modal" ng-controller = "customermodulecontroller" style="display: block;">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<Center><b>{{isNewCust}} CUSTOMER</b></Center>
+</div>
+<div class="modal-body" >
+	<div class="box box-warning">
+            <!-- /.box-header -->
+            <div class="box-body">
+              <form role="form">
+                <!-- text input -->
+                <div class="form-group">
+                  <label>Customer Location</label>
+                  <input type="number" class="form-control" ng-model = "custbean.custloc" ng-disabled="editcust" placeholder="Enter Customer number...">
+                </div>
+				
+				 <div class="form-group">
+                  <label>Customer Name</label>
+                  <input type="text" class="form-control" ng-model = "custbean.custname" placeholder="Enter Customer name...">
+                </div>
+                
+                <div class="form-group">
+                  <label>Address</label>
+                  <textarea class="form-control" ng-model = "custbean.address" placeholder="Enter Address..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="email" class="form-control" ng-model = "custbean.email" placeholder="Enter Email address...">
+                </div>
+                
+                 <div class="form-group">
+                  <label>Phone 1</label>
+                  <input type="number" class="form-control" ng-model = "custbean.phone1" placeholder="Enter primary contact...">
+                </div>
+                
+                 <div class="form-group">
+                  <label>Phone 2</label>
+                  <input type="number" class="form-control" ng-model = "custbean.phone2" placeholder="Enter Secondary contact...">
+                </div>
+                
+				</form>
+				</div>
+</div>
+
+<div class="modal-footer">
+<button ng-click = "saveCust()"  >Save</button>
+<button  ng-click = "closeopenCust()"  >Cancel</button>
+</div>
+</div>
+</div>
+</div>

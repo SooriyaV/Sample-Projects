@@ -1,0 +1,19 @@
+<section class="content-header">
+      <h1><strong>
+      Customer Management
+       </strong>
+      </h1>
+      <ol class="breadcrumb">
+       <!--  <li><a href="#"><i class="fa fa-dashboard"></i> DashBoard</a></li> -->
+        <li class="active"><i class="fa fa-dashboard"></i>Manage Customers</li>
+      </ol>
+    </section>
+  <div ng-controller = "customermodulecontroller" style="margin-top:15px;">
+  
+  <div id="grid1" ui-grid="customergridoptions" ui-grid-pagination ui-grid-auto-resize ui-grid-selection class="grid"></div>
+  
+ 
+  <button ng-click="newCust()">New Customer</button>
+  <button ng-click="modifyCust()" ng-if="singleselection">Modify Customer</button>
+  <button ng-click="removeCust()">Remove Customer</button>
+</div> 

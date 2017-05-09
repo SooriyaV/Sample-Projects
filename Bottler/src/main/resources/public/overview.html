@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Suria 1903</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Google Maps API -->
+<!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="scripts/supportLib/bootstrap-min.css">
+  <!-- UI Grid -->
+  <link rel="stylesheet" href="scripts/supportLib/ui-grid-style.css" type="text/css">
+  <!-- Font Awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+   <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="css/AdminLTE.min.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="css/datepicker3.css">
+  <!-- Select -->
+  <link rel="stylesheet" href="css/select2.min.css">
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect.
+  -->
+  <link rel="stylesheet" href="css/skin-blue.min.css">
+  <link rel="stylesheet" href="css/skin-purple.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+
+
+-->
+<style>
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 500px;
+    width:100%;
+    overflow-y: auto;
+}
+.map-wrapper {
+    position: relative;
+    height: calc(100vh - 4em - 64px);
+}
+
+.angular-google-map-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+</style>
+<body class="hold-transition skin-purple  sidebar-mini fixed" ng-app="hello" class="ng-cloak" ng-controller="navigation as navctrl">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="#/dashboard" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>T</b>o<b>W</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>T</b>rade <b>O</b>n <b>W</b>eb</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+     </a> 
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a role ="button" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="scripts/images/user_man.png" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs">Sooriya</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="scripts/images/user_man.png" class="img-circle" alt="User Image">
+
+                <p>
+                  Sooriya
+                  <small>Developer</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+            <!--   <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+             -->    <!-- /.row -->
+              
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-right">
+                  <a role="button" class="btn btn-default btn-flat" ng-click="logout()">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" >
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu">
+       
+        <!-- Optionally, you can add icons to the links -->
+        <!-- DashBoard -->
+        
+        <li class="active"><a href="#/dashboard"><i class="fa fa-link"></i> <span>DashBoard</span></a></li>
+        
+        <!-- Order Management --> 
+        <li class="treeview">
+          <a role="button"><i class="fa fa-link"></i> <span>Order Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#/orders">Current Orders</a></li>
+            <li><a href="#/pastorders">Past Orders</a></li>
+          </ul>
+        </li>
+        
+        <!-- Routes and Settlement -->
+        <li class="treeview">
+          <a role="button"><i class="fa fa-link"></i> <span>Routes and Settlement</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#/route">Routes</a></li>
+            <li><a href="#/settlement">Settlement</a></li>
+            <li><a href="#/liveTrack">Live Track Routes!</a></li>
+          </ul>
+        </li>
+        
+        <!-- Inventory Management -->
+        
+        <li class="treeview">
+          <a role="button"><i class="fa fa-link"></i> <span>Inventory Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#/inventory">Manage SKUs</a></li>
+            <li><a href="#/inventoryhome">Manage Stocks</a></li>
+          </ul>
+        </li>
+        
+        <!-- Customer Management -->
+        
+        <li class="treeview">
+          <a role="button"><i class="fa fa-link"></i> <span>Customer Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#/customer">Manage Customer</a></li>
+            <li><a href="#customergroup">Manage Customer Group</a></li>
+          </ul>
+        </li>
+        
+        <!-- Pricing -->
+        
+         <li class="treeview">
+          <a role="button"><i class="fa fa-link"></i> <span>Pricing</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#/const">Article Pricing</a></li>
+            <li><a href="#/const">Customer Group Pricing</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+   
+
+    <!-- Main content -->
+    <section class="content" data-ng-view>   
+      <!-- Your Page Content Here -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+   <!--    <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+    -->   <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+          <div class="tab-pane active" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+            Change Skin Color 
+              <!-- <input type="checkbox" class="pull-right" checked> -->
+            </label>
+
+            <p>
+              Under Construction
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 2.2.3 -->
+<script src="scripts/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="scripts/supportLib/bootstrap-min.js"></script>
+<!-- AdminLTE App -->
+<script src="scripts/misc/app.min.js"></script>
+<!-- Select2 -->
+<script src="scripts/plugins/select2.full.min.js"></script>
+<!-- Angular,Google Maps and Google Charts -->
+  <script src="scripts/supportLib/angular-min.js"></script>
+  <!-- <script src="scripts/supportLib/google-map.js"></script>   -->
+   <script src="scripts/supportLib/underscore-min.js"></script>
+  <script src="scripts/supportLib/angular-animate-min.js"></script>
+  <script src="scripts/supportLib/angular-ngcookies.js"></script>
+  <script src="scripts/supportLib/angular-aria-min.js"></script>
+  <script src="scripts/supportLib/ui-grid-min.js"></script>
+  <script src="scripts/supportLib/angular-route-min.js"></script>
+  <script src="scripts/supportLib/ng-google-chart.js"></script>
+  <script src="scripts/supportLib/ng-google-chart.min.js"></script>
+  <script src="scripts/supportLib/angular-google-maps.js"></script>
+  <script src="scripts/supportLib/angular-simple-logger-min.js"></script>
+  <script src="scripts/supportLib/loadash.min.js"></script>
+  <script src="scripts/supportLib/ng-geolocation-min.js"></script>
+<!-- Controllers -->
+<script src="scripts/hello.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/misc/sidebarctrl.js"></script>
+<script src="scripts/controllers/invgridctrl.js"></script>
+<script src="scripts/controllers/navigation.js"></script>
+<script src="scripts/controllers/customercontroller.js"></script>
+<script src="scripts/controllers/factory_modal.js"></script>
+<script src="scripts/controllers/OrderController.js"></script>
+<script src="scripts/controllers/customermodulecontroller.js"></script>
+<script src="scripts/controllers/modifyOrderCtrl.js"></script>
+<script src="scripts/controllers/factory_intermediate.js"></script>
+<script src="scripts/controllers/inventoryandstockctrl.js"></script>
+<script src="scripts/controllers/stockcontroller.js"></script>
+<script src="scripts/controllers/customerGroupController.js"></script>
+<script src="scripts/controllers/selectionCriteriaController.js"></script>
+<script src="scripts/controllers/routeController.js"></script>
+<script src="scripts/controllers/dashboardcontroller.js"></script>
+<script src="scripts/controllers/routeWizard.js"></script>
+<script src="scripts/controllers/accordion.js"></script>
+<script src="scripts/controllers/ordersInRouteCtrl.js"></script>
+<script src="scripts/controllers/showOrderDetailCtrl.js"></script>
+<script src="scripts/controllers/customerModalCtrl.js"></script>
+<script src="scripts/controllers/settlementCtrl.js"></script>
+<script src="scripts/controllers/routesinbatchCtrl.js"></script>
+<script src="scripts/controllers/pastorderctrl.js"></script>
+<script src="scripts/controllers/showpast.js"></script>
+<script src="scripts/controllers/livetrackctrl.js"></script>
+<script src="scripts/misc/datepicker.js"></script>
+<script src="scripts/misc/accordion-menu.js"></script>
+<script src="scripts/misc/jquery.slimscroll.min.js"></script>
+<script src="scripts/plugins/bootstrap-datepicker.js"></script>
+<!-- Page script -->
+
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. Slimscroll is required when using the
+     fixed layout. -->
+</body>
+
+</html>

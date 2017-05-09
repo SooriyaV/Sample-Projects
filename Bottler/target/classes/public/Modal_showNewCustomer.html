@@ -1,0 +1,50 @@
+<div class="modal" ng-controller = "customerModalCtrl" ng-style="modalStyle">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<center>New Customer</center>
+</div>
+<div class="modal-body">
+<div class ="row">
+
+<div class="col-md-12">
+<label class ="col-md-6">Customer Name</label>
+<input class ="col-md-6 col-xsm-12" type="text" ng-model="" required>
+</div>
+
+<div class="col-md-12">
+<label class ="col-md-6">Address</label>
+<textarea class ="col-md-6" ng-model=""></textarea>
+</div>
+
+<div class="col-md-12">
+<label class ="col-md-6">Email</label>
+<input  class ="col-md-6" type="email" id="inputEmail"  data-error="Bruh, that email address is invalid" required>
+</div>
+
+<div class="col-md-3">
+<label>Phone1</label>
+<input type="text" ng-model="">
+</div>
+
+<div class="col-md-3">
+<label>Phone2</label>
+<input type="text" ng-model="">
+</div>
+
+
+</div>
+  
+</div>
+<div class="modal-footer">
+<button ng-click = "saveCustomer()"  >Save</button>
+<button type="button" ng-click = "closeshowNewCustomer()">
+          <span class="glyphicon glyphicon-remove"></span> Cancel 
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$('#myForm').validator()
+</script>

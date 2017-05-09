@@ -1,0 +1,14 @@
+<div>
+<ul class="nav nav-tabs">
+    <li ><a href="#inventory">Manage SKUs</a></li>
+    <li class="active"><a href="#/inventoryhome">Manage Inventory</a></li>
+  </ul>
+  
+  <div ng-controller = "stockController">
+  <div id="grid1" ui-grid="im02gridoptions" ui-grid-edit ui-grid-cellnav ui-grid-selection class="grid"></div>
+  
+  <button ng-click ="newSku()">Add Item</button>
+ <button ng-click ="orderUnits()">Order units</button>
+ <button ng-click ="deleteinventory()">Remove item</button> 
+  </div>
+</div> 

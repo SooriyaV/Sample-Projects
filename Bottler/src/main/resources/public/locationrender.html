@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app = "locationapp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Location Renderer</title>
+<script src="scripts/supportLib/angular-min.js"></script>
+  <script src="scripts/supportLib/angular-animate-min.js"></script>
+  <script src="scripts/supportLib/angular-ngcookies.js"></script>
+  <script src="scripts/supportLib/angular-aria-min.js"></script>
+  <script src="scripts/supportLib/ui-grid-min.js"></script>
+  <script src="scripts/supportLib/angular-route-min.js"></script>
+  <script src="scripts/supportLib/ng-google-chart.js"></script>
+  <script src="scripts/supportLib/ng-google-chart.min.js"></script>
+  <script src="scripts/supportLib/google-map.js"></script>  
+  <script src="scripts/supportLib/ng-geolocation-min.js"></script>
+   <script src="scripts/supportLib/underscore-min.js"></script>  
+  <link rel="stylesheet" href="scripts/supportLib/bootstrap-min.css"> 
+  <link href="scripts/sidebar.css" rel="stylesheet">
+  <script src="scripts/supportLib/jquery-min.js"></script>
+  <script src="scripts/supportLib/bootstrap-min.js"></script>
+  <script src="scripts/supportLib/angular-google-maps.js"></script>
+  <script src="scripts/supportLib/angular-simple-logger-min.js"></script>
+  <script src="scripts/supportLib/loadash.min.js"></script>
+
+</head>
+<body ng-cloak ng-controller ="locationpostctrl">
+<div class="box-body">
+              <form role="form">
+                <!-- text input -->
+                <div class="form-group">
+                  <label>Route Name</label>
+                  <input type="text" class="form-control" ng-model = "newroute.routeName" ng-disabled="editinv" placeholder="Enter Route Name...">
+                </div>
+				
+				 <div class="form-group">
+                  <label>Latitude</label>
+                  <input type="text" class="form-control" ng-model = "latitude" disabled>
+                </div>
+                
+                 <div class="form-group">
+                  <label>Longitude</label>
+                  <input type="text" class="form-control" ng-model = "longitude" disabled>
+                </div>
+			</form>
+				</div>
+				<button ng-click="locationmethod()">Start</button>
+</div>
+<script src="scripts/controllers/locationrenderCtrl.js"></script>
+</body>
+</html>

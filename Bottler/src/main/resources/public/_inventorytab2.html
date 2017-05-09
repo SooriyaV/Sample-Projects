@@ -1,0 +1,22 @@
+<section class="content-header">
+      <h1><strong>
+     Inventory Management
+       </strong>
+      </h1>
+      <ol class="breadcrumb">
+       <!--  <li><a href="#"><i class="fa fa-dashboard"></i> DashBoard</a></li> -->
+        <li class="active"><i class="fa fa-dashboard"></i>  Manage Stocks</li>
+      </ol>
+    </section>
+  
+  <div style="margin-top:15px;" ng-controller = "inventoryandstockctrl">
+  
+  <div id="grid1" ui-grid="im01gridoptions" ui-grid-edit ui-grid-auto-resize ui-grid-selection class="grid"></div>
+  
+ 
+ <button ng-click="newInv()">Create Warehouse</button>
+  <button ng-click="modifyInv()" ng-if="singleselection" ng-disabled ="disableModify">Modify Warehouse Data</button>
+  <button ng-click ="tomanagestock()" ng-if="singleselection" ng-disabled ="disableModify">Manage Stock</button>
+  <button ng-click="removeInv()">Remove</button>
+ 
+</div> 

@@ -1,0 +1,46 @@
+<div class="modal" ng-controller = "inventorygridcontroller" style="display: block;">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<Center><b>{{isNew}} SKU</b></Center>
+</div>
+<div class="modal-body" >
+	<div class="box box-warning">
+            <!-- /.box-header -->
+            <div class="box-body">
+              <form role="form">
+                <!-- text input -->
+                <div class="form-group">
+                  <label>Article Number</label>
+                  <input type="number" class="form-control" ng-model = "skubean.articlenumber" ng-disabled="editsku" placeholder="Enter article number...">
+                </div>
+				
+				 <div class="form-group">
+                  <label>Article Name</label>
+                  <input type="text" class="form-control" ng-model = "skubean.articlename" placeholder="Enter article name...">
+                </div>
+				
+				 <div class="form-group">
+                  <label>Price per Unit</label>
+                  <input type="number" class="form-control" ng-model = "skubean.price" placeholder="Enter article price...">
+                </div>
+				</form>
+				</div>
+</div>
+
+<div class="modal-footer">
+<button ng-click = "saveSKU()"  >Save</button>
+<button  ng-click = "closeopenSKU()"  >Cancel</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+	  $(".select2").select2();
+   //Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    });
+    });
+</script>

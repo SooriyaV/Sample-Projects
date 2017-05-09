@@ -1,0 +1,16 @@
+<div class="modal" ng-controller = "routesinbatchCtrl" ng-style="modalStyle">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<center><b>Checked-In Routes</b></center>
+</div>
+<div class="modal-body" >
+<div id="grid1" ui-grid="routesinchkinopt" ui-grid-pagination ui-grid-auto-resize  ui-grid-selection class="grid"></div>
+</div>
+<div class="modal-footer">
+<button ng-click = "settleinbatch()"  >Start Settling</button>
+<button  ng-click = "closeopenroutesforbatch()"  >Cancel</button>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,22 @@
+<section class="content-header">
+      <h1><strong>
+       Route Management
+       </strong>
+      </h1>
+      <ol class="breadcrumb">
+       <!--  <li><a href="#"><i class="fa fa-dashboard"></i> DashBoard</a></li> -->
+        <li class="active"><i class="fa fa-dashboard"></i>  Routes</li>
+      </ol>
+    </section>
+ 
+ <div style="margin-top:15px;" ng-controller = "routeController">
+  
+  <div id="grid1" ui-grid="routeGridOptions" ui-grid-pagination ui-grid-auto-resize  ui-grid-selection class="grid"></div>
+  
+ <button ng-click="newRoute()">New Route</button>
+  <button ng-click="viewOrders()" ng-disabled ="!view">View Orders</button>
+  <button ng-click="checkOut()" ng-if = "statusCheckOut">Check Out</button>
+  <button ng-click="checkIn()" ng-if = "statusCheckIn">Check In</button>
+  <!-- <button ng-click="removeRoute()">Remove</button> -->
+   
+</div> 

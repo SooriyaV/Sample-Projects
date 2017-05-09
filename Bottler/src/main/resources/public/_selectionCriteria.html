@@ -1,0 +1,49 @@
+<h3> Selection Criteria for {{CustomerGroup}}</h3>
+<div ng-controller = "selectionCriteriaController as ctrl">
+<div class = "row">
+<div class = "col-md-8">
+<div class ="row">
+<div class="col-md-2"><h4>CRITERIA</h4> </div>
+<button class = "col-md-2" ng-click = "addWithOperator()">Add One</button>
+<button class = "col-md-2" ng-click = "remove()" style="margin-left:5px;">Remove</button>
+<button class = "col-md-2" style="margin-left:5px;" ng-click = "saveData()">Save</button>
+</div>
+<div class = "col-md-8" ng-repeat = "iterate in cm03array" style="border:solid 1px blue; padding-top: 10px;margin-top :10px;float:left;">
+<div class ="row" style="margin-left :36%;">
+<b>{{iterate.appender}}</b>
+</div>
+<div class ="row" style="margin-top :10px;">
+<div class ="col-md-6">
+<select style = "height:30px;" ng-model="iterate.key" ng-change ="checkdirty()" ng-options="x for x in customersample">
+<option value="" disabled selected>Identifier</option></select>
+</div>
+
+<div class ="col-md-2">
+<textarea  placeholder ="value1;value2;.." ng-change="checkdirty()" ng-model = "iterate.values"></textarea>
+</div>
+
+</div>
+</div>
+
+
+
+<div class ="col-md-10"  ng-show ="isAdd" style ="margin-top:20px;">
+<label>Choose an Operator :</label>
+<select style = "height:50px;" ng-model="operatorInput" ng-change="add()" ng-options="y for y in operator">
+    <option value="" disabled selected>Operator</option></select>  
+
+</div>
+
+</div>
+
+
+
+
+
+<div class = "col-md-4" style="border: solid 10px grey; ">
+
+<h4>Customers in the Group</h4>
+ <div id="grid1" ui-grid="customergridoptions" ui-grid-pagination ui-grid-auto-resize  ui-grid-selection class="grid">&nbsp;</div>
+ </div>
+</div>
+</div>

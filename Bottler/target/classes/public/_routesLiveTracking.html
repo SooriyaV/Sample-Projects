@@ -1,0 +1,20 @@
+
+<section class="content-header">
+      <h1><strong>
+     Live Tracking 
+       </strong>
+      </h1>
+      <ol class="breadcrumb">
+       <!--  <li><a href="#"><i class="fa fa-dashboard"></i> DashBoard</a></li> -->
+        <li class="active"><i class="fa fa-dashboard"></i>Live Tracking</li>
+      </ol>
+    </section>
+    
+    
+    <div ng-controller="livetrackctrl">
+    {{options}}
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds" >
+        <ui-gmap-markers models="randomMarkers" coords="'self'" icon="'icon'">
+        </ui-gmap-markers>
+    </ui-gmap-google-map>
+</div>

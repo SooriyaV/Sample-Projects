@@ -1,0 +1,19 @@
+<section class="content-header">
+      <h1><strong>
+      Settlement
+       </strong>
+      </h1>
+      <ol class="breadcrumb">
+       <!--  <li><a href="#"><i class="fa fa-dashboard"></i> DashBoard</a></li> -->
+        <li class="active"><i class="fa fa-dashboard"></i>  Settlement</li>
+      </ol>
+    </section>
+    
+   <div style="margin-top:15px;" ng-controller = "settlementCtrl">
+  
+  <div id="grid1" ui-grid="SettlementGridOptions" ui-grid-pagination ui-grid-auto-resize  ui-grid-selection class="grid"></div>
+  
+ <button ng-click="newDay()">New Day</button>
+ <button ng-click="browse()">Browse</button>
+  <button ng-click="settleDay()" ng-if="started">Settle Day</button>   
+</div>  

@@ -1,0 +1,59 @@
+<section class="content-header">
+      <h1><strong>
+       DashBoard
+       </strong>
+      </h1>
+      <ol class="breadcrumb">
+       <!--  <li><a href="#"><i class="fa fa-dashboard"></i> DashBoard</a></li> -->
+        <li class="active"><i class="fa fa-dashboard"></i>  DashBoard</li>
+      </ol>
+    </section>
+<div style ="margin-top:50px;" ng-controller = "GenericChartCtrl">
+
+<div class="row">
+ <div class="col-md-4 col-sm-8 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-blue"><i class="ion ion-social-usd"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Sales</span>
+              <span class="info-box-number">{{sales}}%</span>
+            </div>
+           
+          </div>
+          
+        </div>
+  <div class="col-md-4 col-sm-8 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-blue"><i class="ion ion-ios-cart-outline"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Orders</span>
+              <span class="info-box-number">{{orders}}</span>
+            </div>
+            
+          </div>
+          
+        </div>    
+        
+        <div class="col-md-4 col-sm-8 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-blue"><i class="ion ion-ios-cart-outline"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Routes Checked Out</span>
+              <span class="info-box-number">{{routes}}</span>
+            </div>
+            
+          </div>
+        
+        </div>           
+ </div>    
+<div style ="marginLeft:10%"> Show data for the last <input ng-change="daychange()" style="width:10%;" type="text" ng-model = 'days'> days
+</div>
+<div class ="row">
+<div class = "col-md-8 col-lg-12" google-chart chart="myChartObject" style="height:400px; width:100%;"></div>
+
+</div>
+
+</div>

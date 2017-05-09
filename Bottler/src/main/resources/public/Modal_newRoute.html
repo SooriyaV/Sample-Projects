@@ -1,0 +1,37 @@
+<div class="modal" ng-controller = "routeController" ng-style="modalStyle">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<center><b>New Route</b></center>
+</div>
+<div class="modal-body">
+<div class="box box-warning">
+            <!-- /.box-header -->
+            <div class="box-body">
+              <form role="form">
+                <!-- text input -->
+                <div class="form-group">
+                  <label>Route Name</label>
+                  <input type="text" class="form-control" ng-model = "newroute.routeName" ng-disabled="editinv" placeholder="Enter Route Name...">
+                </div>
+				
+				 <div class="form-group">
+                  <label>Driver</label>
+                  <input type="text" class="form-control" ng-model = "newroute.driver" placeholder="Enter Driver...">
+                </div>
+                
+                 <div class="form-group">
+                  <label>Driver</label>
+                  <input type="text" class="form-control" ng-model = "newroute.vehicle" placeholder="Enter Vehicle...">
+                </div>
+			</form>
+				</div>
+</div>
+
+<div class="modal-footer">
+<button ng-click = "saveNewRoute()"  >Save</button>
+<button  ng-click = "CloseNewRoute()"  >Cancel</button>
+</div>
+</div>
+</div>
+</div>

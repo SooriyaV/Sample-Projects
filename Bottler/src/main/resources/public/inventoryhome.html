@@ -1,0 +1,22 @@
+<section class="content-header">
+      <h1><strong>
+      Stock Keeping Unit Management
+       </strong>
+      </h1>
+      <ol class="breadcrumb">
+       <!--  <li><a href="#"><i class="fa fa-dashboard"></i> DashBoard</a></li> -->
+        <li class="active"><i class="fa fa-dashboard"></i>  Manage SKUs</li>
+      </ol>
+    </section>
+  
+  <div style="margin-top:15px;" ng-controller = "inventorygridcontroller">
+  
+  <div id="grid1" ng-if="!refresh" ui-grid="skugridoptions" ui-grid-edit ui-grid-auto-resize ui-grid-selection class="grid"></div>
+  
+  <button ng-click="newSKU()">Create an SKU</button>
+  <button ng-click="modifySKU()" ng-if="singleselection" ng-disabled ="disableModify">Modify SKU</button>
+  <button ng-click="removeSKU()">Remove SKU</button>
+  
+  </div>
+  
+   

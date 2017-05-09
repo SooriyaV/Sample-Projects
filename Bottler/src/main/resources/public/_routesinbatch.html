@@ -1,0 +1,23 @@
+<div ng-controller ="routesinbatchCtrl">
+<section class="content-header">
+      <h1><strong>
+      Routes for the batch on {{batchdate}}
+       </strong>
+      </h1>
+      <ol class="breadcrumb">      
+        <li ><a href="#/settlement"><i class="fa fa-dashboard"></i>  Settlement</a></li>
+         <li class="active"><i class="fa fa-dashboard"></i> RouteinBatch</a></li>
+      </ol>
+    </section>
+    
+
+<div style="margin-top:15px;" id="grid1" ui-grid="routeinBatchOptions" ui-grid-pagination ui-grid-auto-resize  ui-grid-selection class="grid"></div>
+  
+  <button ng-click="addRoutestobatch()">Add Routes</button>
+<!--   <button ng-click="newRoute()">View Orders</button> -->
+
+
+
+
+
+    </div>
