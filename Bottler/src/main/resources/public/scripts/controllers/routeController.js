@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('routeController',function($scope,$rootScope,$http,$location,modal,$cookies){
 
 $scope.statusCheckOut = false;

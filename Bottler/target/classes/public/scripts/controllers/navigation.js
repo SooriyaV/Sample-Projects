@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3
   /*.controller('home', function($scope, $http) {
     $http.get('resource/').success(function(data) {

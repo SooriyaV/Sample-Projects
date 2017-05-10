@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('stockController',function($scope,$http,$rootScope,modal,passdata){
 	$rootScope.im02grid =[];
 	$rootScope.wizard =true;

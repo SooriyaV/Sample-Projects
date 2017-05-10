@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('customerGroupController',function($scope,$rootScope,$location,$http,passdata,modal){
 	 $scope.singleselection = false;
 	

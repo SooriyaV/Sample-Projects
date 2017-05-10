@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller("GenericChartCtrl", function ($scope,$http) {
     $scope.myChartObject = {};
     $scope.days = 5;

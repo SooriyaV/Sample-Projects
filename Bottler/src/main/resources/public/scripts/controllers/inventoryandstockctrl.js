@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('inventoryandstockctrl',function($scope,$http,passdata,$location,$rootScope,modal){
 	
 	$scope.singleselection = false;

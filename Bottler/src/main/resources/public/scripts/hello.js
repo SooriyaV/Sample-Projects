@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 var app3=angular.module('hello', [ 'ngRoute','ngAnimate','ui.grid','ui.grid.edit','ui.grid.selection','ui.grid.resizeColumns','ui.grid.pagination','ui.grid.cellNav','ui.grid.autoResize','googlechart','ngCookies','uiGmapgoogle-maps']);
 
 app3.service('APIInterceptor', function($window){

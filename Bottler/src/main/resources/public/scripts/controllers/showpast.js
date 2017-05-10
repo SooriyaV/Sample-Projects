@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('showpast',function($scope,$cookies,$rootScope,$http,$location){
 
 	$scope.orderdata = [];

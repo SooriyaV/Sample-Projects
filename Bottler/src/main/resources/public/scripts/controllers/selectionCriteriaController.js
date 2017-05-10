@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('selectionCriteriaController',function($scope,$rootScope,$http,modal){
 	$scope.customersample =[];
 	$scope.identifier ='';

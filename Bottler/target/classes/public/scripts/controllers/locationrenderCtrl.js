@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 var locationapp=angular.module('locationapp', [ 'ngRoute','ngCookies','ngGeolocation']);
 
 locationapp.controller('locationpostctrl',function($scope,$http,$interval,$geolocation){

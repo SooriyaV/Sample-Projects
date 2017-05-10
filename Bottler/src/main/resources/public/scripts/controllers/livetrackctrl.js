@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('livetrackctrl',function($scope,$interval,$http){
 	//alert('hi');
 	

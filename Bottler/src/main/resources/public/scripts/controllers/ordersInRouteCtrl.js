@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('ordersInRouteCtrl',function($scope,$cookies,$http,modal){
 	
 	$scope.routeId = $cookies.get('routeFromMain');

@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.factory('modal', ['$compile','$rootScope','$http','$templateRequest','$location', function ($compile, $rootScope,$http,$templateRequest,$location,$scope,passdata) {
 				  return function() {
 				    var elm;

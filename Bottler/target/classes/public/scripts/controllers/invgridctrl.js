@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('inventorygridcontroller',function($scope,$http,modal,$rootScope){
 	
 	$scope.singleselection = false;

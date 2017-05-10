@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('orderEditCtrl',function($scope,$cookies,$rootScope,$location,$http,modal,passdata){ 
 
 //$rootScope.gridOptions2 = {};

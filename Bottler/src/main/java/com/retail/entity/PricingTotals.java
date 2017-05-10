@@ -1,3 +1,7 @@
+/**
+ * Author Sooriya
+ * Email sooriya.v@outlook.com
+ */
 package com.retail.entity;
 
 public class PricingTotals {

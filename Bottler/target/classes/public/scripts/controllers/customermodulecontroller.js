@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('customermodulecontroller',function($scope,$http,$location,modal,$rootScope){
 	
 $scope.action = '';

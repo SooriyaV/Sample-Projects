@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('showOrderDetailCtrl',function($scope,$cookies,$rootScope,$http,$location){
 
 	$scope.orderdata = [];

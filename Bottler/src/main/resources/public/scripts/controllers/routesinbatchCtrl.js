@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('routesinbatchCtrl',function($scope,$rootScope,$cookies,$location,$http,modal){
 	
 

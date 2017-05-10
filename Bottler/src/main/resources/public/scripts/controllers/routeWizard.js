@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('routeWizard',function($scope,$rootScope,$http,modal,passdata){
 	var MyModal = new modal();
 	$scope.routeOrderGrid = [];

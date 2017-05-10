@@ -1,3 +1,7 @@
+/**
+ * Author Sooriya
+ * Email sooriya.v@outlook.com
+ */
 package com.retail.repository;
 
 import com.retail.entity.CustomerGroupCM04Ent;

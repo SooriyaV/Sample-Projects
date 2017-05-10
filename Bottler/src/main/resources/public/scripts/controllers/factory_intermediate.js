@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.factory('passdata',function($rootScope){
 	
 		 var passdata = {

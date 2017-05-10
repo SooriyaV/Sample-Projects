@@ -1,3 +1,7 @@
+/**
+ * Author Sooriya
+ * Email sooriya.v@outlook.com
+ */
 package com.retail.controller;
 
 import com.retail.entity.ArticleEntity;

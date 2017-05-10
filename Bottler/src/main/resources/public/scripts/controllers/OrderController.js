@@ -1,4 +1,7 @@
- app3.controller('gridcontroller',function($rootScope,$scope, $http,modal,$timeout,$location,passdata,$cookies) {
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
+app3.controller('gridcontroller',function($rootScope,$scope, $http,modal,$timeout,$location,passdata,$cookies) {
 			
 	 
 $rootScope.gridOptions1 = {};		  

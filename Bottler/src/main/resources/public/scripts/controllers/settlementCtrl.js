@@ -1,3 +1,6 @@
+/*
+ Author Sooriya
+ Email sooriya.v@outlook.com*/
 app3.controller('settlementCtrl',function($scope,$rootScope,$location,$cookies,$http,modal){
 
 	$scope.batchDate = "";

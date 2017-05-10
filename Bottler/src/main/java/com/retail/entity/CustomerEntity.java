@@ -1,3 +1,7 @@
+/**
+ * Author Sooriya
+ * Email sooriya.v@outlook.com
+ */
 package com.retail.entity;
 
 import javax.persistence.Column;
@@ -6,13 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-
-
-
-
-
-
 
 
 @Entity
